@@ -1,0 +1,8 @@
+# YOLOv8 Instance Segmentation Dataset Config (Stage 1: Guava Foreground Isolation)
+path: ./datasets/guava_seg
+train: images/train
+val: images/val
+test: images/test
+
+names:
+  0: guava_fruit

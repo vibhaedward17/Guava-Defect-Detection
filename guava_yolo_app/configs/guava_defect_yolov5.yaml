@@ -1,0 +1,15 @@
+# YOLOv5 Defect & Anatomical Structure Detection Config (Stage 2: Defect Prediction + False-Positive Suppression)
+# Explicitly modeling anatomical structures (classes 4, 5, 6) prevents YOLOv5 from confusing them with lesions.
+path: ./datasets/guava_defects
+train: images/train
+val: images/val
+test: images/test
+
+names:
+  0: anthracnose
+  1: fruit_canker_scab
+  2: stylar_end_rot
+  3: fruit_fly_puncture
+  4: stem_pedicel          # Suppressed anatomical class (NOT a defect)
+  5: blossom_end_calyx     # Suppressed anatomical class (NOT a defect)
+  6: natural_lenticel_mark # Suppressed natural skin mark (NOT a defect)
